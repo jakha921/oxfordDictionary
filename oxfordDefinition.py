@@ -20,7 +20,7 @@ def getDefinition(word_id):
     senses = results['results'][0]['lexicalEntries'][0]['entries'][0]['senses']
     definitions = []
     for sense in senses:
-        definitions.append(f"👉{sense['definitions'][0]}")
+        definitions.append("👉" + sense['definitions'][0])
     output['definitions'] = "\n".join(definitions)
     
     if results['results'][0]['lexicalEntries'][0]['entries'][0]['pronunciations'][0].get('audioFile'):
